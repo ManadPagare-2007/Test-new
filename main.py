@@ -6,7 +6,22 @@ import streamlit as st
 if "selected_tab" not in st.session_state:
     st.session_state.selected_tab = "2"
 
-data = pd.read_excel("User & Pass.xlsx", "Sheet1")
+data = pd.DataFrame({
+    "USERNAME":["manad@paruluniversity",
+"yash@paruluniversity",
+"shaurya@paruluniversity",
+"parth@paruluniversity",
+"srishti@paruluniversity",
+"bhumi@paruluniversity"],
+"PASSWORD":["25UG033170",
+"25UG031719",
+"25UG035603",
+"25UG033842",
+"25UG036617",
+"25UG035785"
+]
+
+})
 
 staff_members = list(data["USERNAME"])
 staff_passwords = list(data["PASSWORD"])
